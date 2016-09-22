@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi, <%= @user.first_name %>!</h1>
+    <p>
+      User <%= @owner.first_name %> just created an event <%= @event.name %>
+      taking place in <%= @event.place %> at <%= @event.date %>. If you'd like to know more
+      or sign up to this event, please <%= link_to 'click here', event_path(@event) %>.
+    </p>
+    <p>Have a great day!</p>
+  </body>
+</html>

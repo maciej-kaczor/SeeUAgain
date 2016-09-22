@@ -1,0 +1,9 @@
+<%if current_user %>
+	<h1>New Event</h1>
+
+	<%= render 'form', event: @event %>
+
+	<%= link_to 'Back', events_path %>
+<% else %>
+	<h1>Sorry, you have no access to this site. Please <%= link_to "log in", controller: "login", action: "new" %> to continue </h1>
+<% end %>

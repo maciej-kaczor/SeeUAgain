@@ -1,0 +1,7 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+<% if current_user %>
+	<p>logged in as <%= current_user.email %></p>
+<% else %>
+	<p> Please <%= link_to "log in", controller: "login", action: "new" %> </p>
+<% end %>

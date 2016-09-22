@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  place: MyString
+  date: 2016-09-20 13:59:18
+  owner_id: 1
+  max_participants: 1
+
+two:
+  name: MyString
+  description: MyText
+  place: MyString
+  date: 2016-09-20 13:59:18
+  owner_id: 1
+  max_participants: 1

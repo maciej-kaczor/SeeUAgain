@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+<p id="alert"><%= alert %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @event.place %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @event.date %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <% user = User.find(@event.owner_id) %>
+  <%= user.first_name %> <%= user.last_name %>
+</p>
+
+<p>
+  <strong>Max participants:</strong>
+  <%= @event.max_participants %>
+</p>
+
+<p>
+  <strong>Open slots:</strong>
+  <%= @event.max_participants - @event.users.length %>
+</p>
+
+<strong>Participating</strong>
+<ul>
+  <% @event.users.each do |user| %>
+    <li><%= user.first_name %> <%= user.last_name  %></li>
+  <% end %>
+
+</ul>
+<%= link_to 'Sign up for this event', sign_up_event_path(@event) %> </br>
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
+
